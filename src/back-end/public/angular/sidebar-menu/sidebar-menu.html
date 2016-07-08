@@ -1,0 +1,37 @@
+<div class="col-md-3 left_col">
+    <div class="left_col scroll-view">
+        <div class="navbar nav_title" style="border: 0;">
+            <a href="" class="site_title"> <span>Trang quản lý</span></a>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+                <ul class="nav side-menu">
+                    <!--<li ng-class="$state.current.name == 'dashboard' ? 'active' : ''"><a ui-sref="dashboard"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard </a></li>-->
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#danhmuc" ref="#"><i class="glyphicon glyphicon-list"></i> Quản lý danh mục <i class="glyphicon glyphicon-triangle-bottom" style="float: right;"></i></a>
+                        <ul id="danhmuc" class="collapse">
+                            <li ng-class="$state.current.name == 'hocvi' ? 'active' : ''">
+                                <a ui-sref="hocvi"><i class="fa fa-tachometer" aria-hidden="true"></i>Học Vị</a>
+                            </li>
+                            <li>
+                                <a ui-sref="chucdanh"><i class="fa fa-tachometer" aria-hidden="true"></i>Chức Danh</a>
+                            </li>
+                            <li>
+                                <a ui-sref="khoa"><i class="fa fa-tachometer" aria-hidden="true"></i>Khoa</a>
+                            </li>
+                            <li>
+                                <a ui-sref="bomon"><i class="fa fa-tachometer" aria-hidden="true"></i>Bộ môn</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li ng-class="$state.current.name == 'giangvien' ? 'active' : ''">
+                        <a ui-sref="giangvien"><i class="fa fa-tachometer" aria-hidden="true"></i>Quản lý giảng viên</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

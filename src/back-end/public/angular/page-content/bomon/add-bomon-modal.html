@@ -1,0 +1,36 @@
+<div class="modal-header">
+    <h3 class="modal-title">Thêm chức danh</h3>
+</div>
+<div class="modal-body">
+
+    <form name="addBoMon">
+        <div class="form-group">
+            <input required class="form-control" placeholder="Mã bộ môn" ng-model="bm.mabomon">
+        </div>
+
+        <div class="form-group">
+            <input required class="form-control" placeholder="Tên bộ môn" ng-model="bm.tenbomon">
+        </div>
+        <div class="form-group" >
+            <select class="form-control" ng-model="bm.tenkhoa">
+                <option ng-repeat="khoa in dskhoa" value="{{khoa.makhoa}}">
+                    {{khoa.tenkhoa}}
+                </option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input required class="form-control" placeholder="Số điện thoại" ng-model="bm.sodienthoai">
+        </div>
+        <div class="form-group">
+            <input required class="form-control" placeholder="Email" ng-model="bm.email">
+        </div>
+        <div class="form-group">
+            <input required class="form-control" placeholder="Mô tả" ng-model="bm.mota">
+        </div>
+    </form>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-disabled="addBoMon.$invalid || bm.mabomon == null" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" ng-click="close()">Hủy</button>
+</div>

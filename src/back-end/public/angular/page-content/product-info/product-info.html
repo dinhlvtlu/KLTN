@@ -1,0 +1,94 @@
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Sản phẩm</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <button ng-click="addProduct()" class="btn btn-success">Thêm sản phẩm</button>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div id="datatable-responsive_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="dataTables_length" id="datatable_length"><label>Show <select
+                                    ng-options="value as value for value in [1,2,5]"
+                                    ng-model="choose"
+                                    name="datatable_length" aria-controls="datatable" class="form-control input-sm">
+                            </select> entries</label></div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="dataTables_filter">
+                                <label>Tìm theo tên:
+                                    <input ng-model="keyword.name" class="form-control input-sm"
+                                           aria-controls="datatable-responsive">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-xs-12">
+                            <table class="table table-bordered prod-table">
+                                <tr>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Ảnh</th>
+                                    <th>Thông tin</th>
+                                    <th>Nguyên lý hoạt động</th>
+                                    <th>Công dụng</th>
+                                    <th>Hướng dẫn sử dụng</th>
+                                    <th>Chỉ định</th>
+                                </tr>
+                                <tr class="prod"
+                                    ng-repeat="prod in ( products | slice: (currentPage-1)*choose:choose) | orderBy: 'name' | filter: keyword">
+                                    <td>
+                                        <div><i class="fa fa-edit" ng-click="editProd(prod, {'name': prod.name})"></i>{{prod.name}}
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div style="width: 100px"><img style="width: 100%; max-height: 120px;"
+                                                                       ngf-src="prod.image"><i class="fa fa-edit"
+                                                                                               ng-click="editImage(prod, {'image': prod.image})"></i>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div><i class="fa fa-edit" ng-click="editProd(prod, {'info': prod.info})"></i>{{prod.info}}
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div><i class="fa fa-edit"
+                                                ng-click="editProd(prod, {'principle': prod.principle})"></i>{{prod.principle}}
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div><i class="fa fa-edit" ng-click="editProd(prod, {'use': prod.use})"></i>{{prod.use}}
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div><i class="fa fa-edit" ng-click="editProd(prod, {'guide': prod.guide})"></i>{{prod.guide}}
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div><i class="fa fa-edit" ng-click="editProd(prod, {'term': prod.term})"></i>{{prod.term}}
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-offset-5 col-sm-7">
+                            <div class="dataTables_paginate paging_simple_numbers" id="datatable-responsive_paginate">
+                                <pagination items-per-page="choose" boundary-links="true" rotate="false" max-size="5"
+                                            total-items="products.length" ng-model="currentPage"></pagination>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

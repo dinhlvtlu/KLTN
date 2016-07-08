@@ -1,0 +1,51 @@
+<div class="modal-header">
+    <h3 class="modal-title">Thêm sản phẩm</h3>
+</div>
+<div class="modal-body">
+
+    <form name="addProductForm">
+        <div class="form-group">
+            <input required class="form-control" placeholder="Tên sản phẩm" ng-model="product.name">
+        </div>
+
+        <div class="form-group">
+            <textarea required class="form-control" placeholder="Thông tin sản phẩm" ng-model="product.info"></textarea>
+        </div>
+
+        <div class="form-group">
+            <textarea required class="form-control" placeholder="Nguyên lý hoạt động" ng-model="product.principle"></textarea>
+        </div>
+
+        <div class="form-group">
+            <textarea required class="form-control" placeholder="Công dụng" ng-model="product.use"></textarea>
+        </div>
+
+        <div class="form-group">
+            <textarea required class="form-control" placeholder="Hướng dẫn sử dụng" ng-model="product.guide"></textarea>
+        </div>
+
+        <div class="form-group">
+            <textarea required class="form-control" placeholder="Chỉ dịnh" ng-model="product.term"></textarea>
+        </div>
+
+        <div class="form-group">
+            <div class="image-box">
+                <div ngf-select ngf-drop
+                     ng-model="upload_image">
+                    <div ng-if="product.image == null" class="image-box-text" >
+                        <div>Ảnh sản phẩm</div>
+                    </div>
+
+                    <div ng-if="product.image != null" class="image-box-preview">
+                        <img style="width: 100%; height: 100%" ngf-src="product.image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-disabled="addProductForm.$invalid || product.image == null" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" ng-click="close()">Hủy</button>
+</div>

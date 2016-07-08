@@ -1,0 +1,23 @@
+<div class="modal-header">
+    <h3 class="modal-title">Thêm chức danh</h3>
+</div>
+<div class="modal-body">
+    <form name="addChucDanh">
+        <div class="form-group">
+            <input required class="form-control" placeholder="Mã chức danh" ng-model="cd.machucdanh">
+        </div>
+
+        <div class="form-group">
+            <textarea required class="form-control" placeholder="Tên chức danh" ng-model="cd.tenchucdanh"></textarea>
+        </div>
+
+        <div class="form-group">
+            <textarea required class="form-control" placeholder="Mô tả" ng-model="cd.mota"></textarea>
+        </div>
+    </form>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-disabled="addProductForm.$invalid || cd.machucdanh == null" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" ng-click="close()">Hủy</button>
+</div>

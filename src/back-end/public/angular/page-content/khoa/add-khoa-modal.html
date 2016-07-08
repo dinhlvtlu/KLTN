@@ -1,0 +1,32 @@
+<div class="modal-header">
+    <h3 class="modal-title">Thêm khoa</h3>
+</div>
+<div class="modal-body">
+
+    <form name="addKhoaForm">
+        <div class="form-group">
+            <input required class="form-control" placeholder="Mã khoa" ng-model="k.makhoa">
+        </div>
+
+        <div class="form-group">
+            <textarea required class="form-control" placeholder="Tên khoa" ng-model="k.tenkhoa"></textarea>
+        </div>
+
+        <div class="form-group">
+            <textarea required class="form-control" placeholder="Số điện thoại" ng-model="k.sodienthoai"></textarea>
+        </div>
+
+        <div class="form-group">
+            <textarea required class="form-control" placeholder="Email" ng-model="k.email"></textarea>
+        </div>
+
+        <div class="form-group">
+            <textarea required class="form-control" placeholder="Mô tả" ng-model="k.mota"></textarea>
+        </div>
+    </form>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-disabled="addProductForm.$invalid || k.makhoa == null" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" ng-click="close()">Hủy</button>
+</div>

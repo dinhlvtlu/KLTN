@@ -1,0 +1,23 @@
+{
+  "name": "kltn",
+  "version": "1.0.0",
+  "description": "quan ly gio nghien cuu khoa hoc ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Le Van Dinh",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.10.2",
+    "gulp-sort": "^2.0.0",
+    "jsonwebtoken": "5.0.4",
+    "lodash": "^4.0.0",
+    "mime-types": "^2.1.4",
+    "moment": "^2.10.6",
+    "mongojs": "^1.2.1",
+    "mongoose": "^4.2.6",
+    "q": "^1.4.1"
+  }
+}

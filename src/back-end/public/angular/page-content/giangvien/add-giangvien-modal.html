@@ -1,0 +1,82 @@
+<div class="modal-header">
+    <h3 class="modal-title">Thêm giảng viên</h3>
+</div>
+<div class="modal-body">
+
+    <form name="addGiangVien">
+        <div class="form-group">
+            <input required class="form-control" placeholder="Mã giảng viên" ng-model="gv.magiangvien">
+        </div>
+
+        <div class="form-group">
+            <input required class="form-control" placeholder="Tên giảng viên" ng-model="gv.tengiangvien">
+        </div>
+
+        <div class="form-group">
+            <input required class="form-control" placeholder="Giới tính" ng-model="gv.gioitinh">
+        </div>
+
+        <div class="form-group">
+            <input required type="date" class="form-control" placeholder="Ngày sinh" ng-model="gv.ngaysinh">
+        </div>
+
+        <div class="form-group">
+            <input required class="form-control" placeholder="Số điện thoại" ng-model="gv.sodienthoai">
+        </div>
+
+        <div class="form-group">
+            <input required class="form-control" placeholder="Email" ng-model="gv.email">
+        </div>
+
+        <div class="form-group">
+            <input required class="form-control" placeholder="Địa chỉ" ng-model="gv.diachi">
+        </div>
+
+        <div class="form-group">
+            <input required type="date" class="form-control" placeholder="Thời gian bắt đầu" ng-model="gv.thoigianbatdau">
+        </div>
+
+        <div class="form-group" >
+            <select class="form-control" ng-model="gv.hocvi">
+                <option ng-repeat="hocvi in dshocvi" value="{{hocvi.mahocvi}}">
+                    {{hocvi.tenhocvi}}
+                </option>
+            </select>
+        </div>
+
+        <div class="form-group" >
+            <select class="form-control" ng-model="gv.chucdanh">
+                <option ng-repeat="chucdanh in dschucdanh" value="{{chucdanh.machucdanh}}">
+                    {{chucdanh.tenchucdanh}}
+                </option>
+            </select>
+        </div>
+
+        <div class="form-group" >
+            <select class="form-control" ng-model="gv.bomon">
+                <option ng-repeat="bomon in dsbomon" value="{{bomon.mabomon}}">
+                    {{bomon.tenbomon}}
+                </option>
+            </select>
+        </div>
+
+        <div class="form-group" >
+            <select class="form-control" ng-model="gv.khoa">
+                <option ng-repeat="khoa in dskhoa" value="{{khoa.makhoa}}">
+                    {{khoa.tenkhoa}}
+                </option>
+            </select>
+        </div>
+
+
+        <div class="form-group">
+            <input required class="form-control" placeholder="Tình trạng" ng-model="gv.tinhtrang">
+        </div>
+
+    </form>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-disabled="addGiangVien.$invalid || gv.magiangvien == null" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" ng-click="close()">Hủy</button>
+</div>

@@ -1,0 +1,68 @@
+<html ng-app="dw-backend.app">
+<head>
+    <meta charset="UTF-8">
+    <title>abc</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/green.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-progressbar-3.3.4.min.css">
+    <link rel="stylesheet" href="assets/css/jquery-jvectormap-2.0.3.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/textAngular.css">
+
+    <script src="assets/js/jquery-2.1.4.min.js"></script>
+    <script src="assets/js/angular.js"></script>
+    <script src="assets/js/angular-ui-router.js"></script>
+    <script src="assets/js/ui-bootstrap-tpls.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/lodash.min.js"></script>
+    <script src="assets/js/common-utils.js"></script>
+    <script src="assets/js/textAngular-rangy.min.js"></script>
+    <script src="assets/js/textAngular-sanitize.min.js"></script>
+    <script src="assets/js/textAngular.min.js"></script>
+    <script src="assets/js/ng-file-upload.min.js"></script>
+
+    <!-- inject:spa-js-start -->
+    <script src="angular/api/Api.js"></script>
+    <script src="angular/api/product-api.js"></script>
+    <script src="angular/api/hocvi-api.js"></script>
+    <script src="angular/api/chucdanh-api.js"></script>
+    <script src="angular/api/khoa-api.js"></script>
+    <script src="angular/api/bomon-api.js"></script>
+    <script src="angular/api/giangvien-api.js"></script>
+    <script src="angular/backend-angular-app.js"></script>
+    <script src="angular/page-content/product-info/edit/edit-content-modal.js"></script>
+    <script src="angular/page-content/product-info/edit/edit-image-modal.js"></script>
+    <script src="angular/common/theme.js"></script>
+    <script src="angular/page-content/dashboard/dashboard.js"></script>
+    <script src="angular/page-content/login/login.js"></script>
+    <script src="angular/page-content/product-info/product-info.js"></script>
+    <script src="angular/sidebar-menu/sidebar-menu.js"></script>
+    <script src="angular/top-navigation/top-navigation.js"></script>
+    <script src="angular/page-content/hocvi/hocvi.js"></script>
+    <script src="angular/page-content/chucdanh/chucdanh.js"></script>
+    <script src="angular/page-content/khoa/khoa.js"></script>
+    <script src="angular/page-content/bomon/bomon.js"></script>
+    <script src="angular/page-content/giangvien/giangvien.js"></script>
+    <!-- inject:spa-js-end -->
+</head>
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+
+            <side-bar-menu ng-if="User.isLogged"></side-bar-menu>
+            <top-navigation></top-navigation>
+
+            <div class="right_col" role="main" style="height: 100%">
+                <ui-view></ui-view>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

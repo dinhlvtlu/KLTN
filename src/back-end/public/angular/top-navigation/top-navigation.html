@@ -1,0 +1,54 @@
+<div class="top_nav">
+    <div class="nav_menu">
+        <nav class="" role="navigation" ng-show="User.isLogged">
+            <ul class="nav navbar-right top-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> Thông báo <span class="label label-danger">2</span><b class="caret"></b></a>
+                    <ul class="dropdown-menu alert-dropdown" style="width: 310px;">
+                        <li>
+                            <a href="#">10/04/2016 <span class="label label-success">Thông báo 1</span></a>
+                        </li>
+                        <li>
+                            <a href="#">10/04/2016 <span class="label label-danger">Thông báo 2</span></a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">Xem tất cả</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <strong>{{User.name}}</strong> <b class="caret"></b></a>
+                    <ul class="dropdown-menu" style="width: 200px;">
+                        <li>
+                            <a href="thongtincanhan.html"><i class="fa fa-fw fa-user"></i> Thông tin cá nhân</a>
+                        </li>
+                        <li>
+                            <a href="doimatkhau.html"><i class="fa fa-fw fa-pencil"></i> Đổi mật khẩu</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li ng-click="logout()">
+                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Đăng xuất</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!--<div class="nav toggle">-->
+                <!--<a id="menu_toggle"><i class="fa fa-bars"></i></a>-->
+            <!--</div>-->
+
+            <!--<ul class="nav navbar-nav navbar-right">-->
+                <!--<li class="">-->
+                    <!--<a href="" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">-->
+                        <!--<strong>{{User.name}}</strong>-->
+                    <!--</a>-->
+
+                    <!--<ul class="dropdown-menu dropdown-usermenu pull-right">-->
+                        <!--<li><a href=""><i class="fa fa-user pull-right"></i> Đổi mật khẩu</a></li>-->
+                        <!--<li ng-click="logout()"><a href=""><i class="fa fa-sign-out pull-right"></i> Log out</a></li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+            <!--</ul>-->
+        </nav>
+    </div>
+</div>
